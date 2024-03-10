@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from venomMusic import YouTube, app
-from venomMusic.core.call import Anony
+from venomMusic.core.call import app
 from venomMusic.misc import SUDOERS, db
 from venomMusic.utils.database import (
     get_active_chats,
