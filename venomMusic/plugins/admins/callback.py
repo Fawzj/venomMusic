@@ -24,7 +24,6 @@ from venomMusic.utils.stream.autoclear import auto_clean
 from venomMusic.utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
-    SUPPORT_CHAT,
     SOUNCLOUD_IMG_URL,
     STREAM_IMG_URL,
     TELEGRAM_AUDIO_URL,
