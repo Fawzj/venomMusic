@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
 from venomMusic import YouTube, app
-from venomMusic.core.call import Anony
+from venomMusic.core.call import app
 from venomMusic.misc import db
 from venomMusic.utils.database import get_loop
 from venomMusic.utils.decorators import AdminRightsCheck
