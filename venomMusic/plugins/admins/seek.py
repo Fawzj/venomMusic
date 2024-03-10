@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from venomMusic import YouTube, app
-from venomMusic.core.call import Anony
+from venomMusic.core.call import app
 from venomMusic.misc import db
 from venomMusic.utils import AdminRightsCheck, seconds_to_min
 from venomMusic.utils.inline import close_markup
