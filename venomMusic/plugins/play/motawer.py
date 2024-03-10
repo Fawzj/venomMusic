@@ -1,0 +1,31 @@
+import asyncio
+import os
+import requests
+import pyrogram
+from pyrogram import Client, filters, emoji
+from strings.filters import command
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
+from pyrogram.errors import MessageNotModified
+from venomMusic import app
+from config import OWNER_ID, LOGGER_ID
+
+
+@app.on_message(command(["مطور البوت", "مطور", "المطور"]))
+async def zdatsr(client: Client, message: Message):
+    usr = await client.get_users(OWNER_ID)
+    name = usr.first_name
+    usrnam = usr.username
+    await message.reply_video(
+        video=f"https://telegra.ph/file/442ea597b1a9cd06df6e3.mp4",
+        caption=f"""<b>» مرحبـاً بك عـزيـزي </b> {message.from_user.mention} .\n\n<b>» هذا هو حساب مطور البوت</b>""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
+                ],[
+                    InlineKeyboardButton(
+                        "𓏺𝗦𝗼𝘂𝗿𝗰𝗲ᯓ𝗩𝗘𝗡𝗢𝗠𖠛", url="https://t.me/K_o_c_3"),
+                ],
+            ]
+        ),
+    )
