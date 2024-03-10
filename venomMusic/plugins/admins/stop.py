@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from venomMusic import app
-from venomMusic.core.call import Anony
+from venomMusic.core.call import app
 from venomMusic.utils.database import set_loop
 from venomMusic.utils.decorators import AdminRightsCheck
 from venomMusic.utils.inline import close_markup
