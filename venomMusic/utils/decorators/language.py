@@ -1,5 +1,5 @@
-from AFROTOMusic.misc import SUDOERS
-from AFROTOMusic.utils.database import get_lang, is_maintenance
+from venomMusic.misc import SUDOERS
+from venomMusic.utils.database import get_lang, is_maintenance
 from strings import get_string
 
 
