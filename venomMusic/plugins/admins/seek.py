@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from venomMusic import YouTube, app
-from venomMusic.core.call import app
+from venomMusic.core.call import Mody
 from venomMusic.misc import db
 from venomMusic.utils import AdminRightsCheck, seconds_to_min
 from venomMusic.utils.inline import close_markup
@@ -10,7 +10,7 @@ from config import BANNED_USERS
 
 
 @app.on_message(
-    filters.command(["seek", "cseek", "seekback", "cseekback"])
+    filters.command(["seek", "تقدم", "seekback", "cseekback"])
     & filters.group
     & ~BANNED_USERS
 )
@@ -56,7 +56,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if "index_" in file_path:
         file_path = playing[0]["vidid"]
     try:
-        await Anony.seek_stream(
+        await Mody.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),
